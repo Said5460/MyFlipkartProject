@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listners.ListnerClass1"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testClasses.VerifyUserCanGetLowestPriceProduct">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="VerifyUserCanGetLowestPriceProductFromEachPage"/>
+        </methods>
+      </class> <!-- testClasses.VerifyUserCanGetLowestPriceProduct -->
+      <class name="testClasses.VerifyUserCanAddNewAddress">
+        <methods>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="addNewAddress" invocation-numbers="0"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testClasses.VerifyUserCanAddNewAddress -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
